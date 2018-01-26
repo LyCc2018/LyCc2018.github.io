@@ -1,2 +1,2 @@
-# LyCc2018.github.io
+# Just Stop
 Secret Garden

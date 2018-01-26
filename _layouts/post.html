@@ -1,0 +1,26 @@
+--- 
+layout: default 
+body_class: post-template 
+---
+{% if page.image %}
+<div id="feature_image">
+	<div class="inner"
+		style="background-image: url('{{ site.baseurl }}/content/images//{{ page.image }}')">
+		<img src='{{ site.baseurl }}/content/images/{{ page.image }}'></div>
+</div>
+{% endif %}
+<article role="main" class="{% if page.image %}image{% endif %}">
+	<header>
+		<a href="{{ site.baseurl }}/index.html" id="home_link">«</a>
+		<div class="meta">
+			<time datetime="{{ page.date | date:'%Y-%m-%d' }}">
+				<a href="{{ page.url }}">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</a>
+			</time>
+			<span class="count" id="js-reading-time">&nbsp;</span>
+		</div>
+		<h1>{{ page.title }}</h1>
+		<div style="margin-top: 15px;color: #FFFFFF;background-color: #77D7FF;border-radius: 10px;text-align: center;display: inline-block;padding: 5px;">{{ page.tag }}</div>
+	</header>
+	<div class="text" id="js-post-content">{{ content }}</div>
+{% include footer.html %}
+</article>
